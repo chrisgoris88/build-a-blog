@@ -1,11 +1,19 @@
 <!doctype html>
-<html>
-    <head>
-        <title>{{title}}</title>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href ="{{ url_for('static',filename='styles/main.css') }}">
+    <title>Build a Blog{% block title %}{% endblock %}</title>
+</head>
 <body>
+    <a href="/blog"><h1>Build a Blog</h1></a>
+    <nav>
+        <a href="/blog">Main Blog Page</a>
+        <a href="/newpost">Add a Blog Entry</a>
+    </nav>
 
     {% block content %}
+
     {% endblock %}
     
 </body>

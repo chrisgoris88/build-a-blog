@@ -42,7 +42,7 @@ def blog():
 
    if id:
        post = Blog.query.filter_by(id=id).first()
-       return render_template('post.html', post=post)
+       return render_template('posts.html', post=post)
 
    posts = get_ordered_posts()
    return render_template('blog.html', posts=posts)
